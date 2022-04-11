@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+    <link rel="stylesheet" href='./css/newstyle.css'>
+    <link rel="shortcut icon" type="image/ico" href="./images/NindoWebLogo.svg">
+</head>
+<body class="navMain">
+    <header class="container-custom-header d-flex justify-content-center px-lg-0 px-1">
+        <nav id="navBar" class="d-flex justify-content-between align-items-center col-12">
+            <div class="item1 d-flex justify-content-xl-start justify-content-between align-items-center px-0">
+               <div className="d-flex col-6 align-items-center">
+                    <img src="./images/NindoWebLogo-WBG.svg" height="50px" width="50px" alt="LOGO">
+                    <a class="mx-1 mx-lg-2 active" href="./home.html">Home</a>
+                    <a class="mx-1 mx-lg-2" href="./team.html">Team</a>
+                    <a class="mx-1 mx-lg-2" href="./blog.html">Blog</a>
+                    <a class="mx-1 mx-lg-2" href="./hiring.html">Hiring</a>
+
+               </div>
+                <div class="item2 d-xl-none d-flex align-items-center px-3">
+                    <img src="./images/Rocket.svg" height="40px" width="40px" alt="Rocket">
+                    <a href="./lunch.html">Launch project</a>
+                </div>
+            </div>
+            <div class="item2 d-xl-flex d-none align-items-center px-3">
+                <img src="./images/Rocket.svg" height="42px" width="42px" alt="">
+                <a href="./lunch.html">Launch your project</a>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <div class="container d-flex flex-column justify-content-between">
+            <section id="teamHeader" class="d-flex flex-column">
+                <h1>
+                    Nindo <span class="singleLeter">L</span>unch
+                </h1>
+                <h3>
+                </h3>
+                <p>
+                    Get to know the pros you work with.
+                </p>
+            </section>
+            <section id="LunchSection-1">
+                <div class="parentLunch d-flex justify-content-between flex-column ">
+                    <form action="https://nindoweb.com/api/v1/hiring" method="post" class="d-flex justify-content-between flex-column" >
+                        <div class="d-flex flex-lg-row flex-column">
+                            <fieldset class="d-flex mr-5" style="position: relative;">
+                                <legend>
+                                    E-Mail
+                                </legend>
+                                <input onchange="upload()" tabindex="1000000000" type="email" name="lunchEmail">
+                            </fieldset>
+                            <fieldset class="d-flex " style="position: relative;">
+                                <legend id=''>
+                                    Your name (or company)
+                                </legend>
+                                <input onchange="upload()" type="text" name="company" id="">
+                            </fieldset>
+                        </div>
+                        <div class="textAria d-flex">
+                            <p>
+                                Explanation
+                            </p>
+                            <textarea onchange="upload()" name="textAria" id="textAria"></textarea>
+                        </div>
+                        <div class="LunchPrice w-100 d-flex flex-wrap justify-content-between align-items-center">
+                            <!-- https://dribbble.com/shots/10128438-Tailwind-Exploration-Status-Filter -->
+                            <label class="item justify-content-center d-flex align-items-center active"><input class="d-none" type="radio" name="1" value="5,000 - 15,000 $" checked><span>5,000 - 15,000 $</span></label>
+                            <label class="item justify-content-center d-flex align-items-center"><input class="d-none" type="radio" name="2" value="15,000 - 50,000 $"><span>15,000 - 50,000 $</span></label>
+                            <label class="item justify-content-center d-flex align-items-center"><input class="d-none" type="radio" name="3" value="50,000 - 150,000 $"><span>50,000 - 150,000 $</span></label>
+                            <label class="item justify-content-center d-flex align-items-center"><input class="d-none" type="radio" name="4" value="More than 150,000 $"><span>More than 150,000 $</span></label>                                                        
+                            <!-- <input class="item text-center d-flex align-items-center active" value='5,000 - 15,000 $' readonly> -->
+                            <!-- <input class="item text-center d-flex align-items-center" value='15,000 - 50,000 $' readonly> -->
+                            <!-- <input class="item text-center d-flex align-items-center" value='50,000 - 150,000 $' readonly> -->
+                            <!-- <input class="item text-center d-flex align-items-center" value='More than 150,000 $' readonly > -->
+                        </div>
+                        <div class="lunchSubmmitBtn d-flex justify-content-end">
+                            <button class="d-block" type="submit">Submit</button>
+                        </div>
+                    </form>
+                    
+                    
+                </div>
+                
+            </section>
+        </div>
+    </main>
+    <footer>
+        <section id="footer">
+            <div class="footer-bg d-flex justify-content-center align-items-center">
+                <div class="d-flex flex-column">
+                    <div> 
+                        <span style="font-size: 54px;font-family: ndb;">
+                            Let’s
+                        </span>
+                    </div>
+                    <div style="position: relative;overflow: hidden;" class="foterLunch d-flex align-items-center justify-content-start">
+                        <img style="position: absolute;right: 0;bottom: -5px;right: 0;" src="./images/Rocket2.svg" width="70px" height="70px" alt="Rocket" title="Rocket">
+                        <a class="btn" href="./lunch.html">Launch your project</a>
+                    </div>
+                    <div class="FooterGoal mt-1">
+                        <span style="font-size: 25px;font-family: ndb;">
+                            We’ll be with you until the GOAL.
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <script src="./js/bootstrap.bundle.js"></script>
+        <script src="./node_modules/jquery/dist/jquery.min.js"></script>
+        <script src='./js/main.js'></script>
+    </footer>
+    
+</body>
+</html>
